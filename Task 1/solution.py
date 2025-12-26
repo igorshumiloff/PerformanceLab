@@ -2,15 +2,15 @@ import sys
 
 def get_path(size, step):
     result = []
-    index = 0
+    pos = 0
     while True:
-        result.append(str(index + 1))
-        index = index + step - 1
-        if index >= size:
-            index = index % size
-        if index == 0:
+        result.append(str(pos + 1))
+        pos = pos + step - 1
+        if pos >= size:
+            pos = pos % size
+        if pos == 0:
             break
-        index = (index + 1) % size
+        pos = (pos + 1) % size
     return ''.join(result)
 
 if __name__ == "__main__":
